@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Quiz | EduSmart</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --primary: #007bff;
+            --secondary: #0056b3;
+            --light-blue: #f0f7ff;
+            --shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        body { background-color: #f8f9fa; font-family: 'Poppins', sans-serif; }
+
+        .quiz-container { 
+            background: white; 
+            padding: 40px; 
+            border-radius: 20px; 
+            box-shadow: var(--shadow); 
+            max-width: 700px; 
+            margin: 50px auto;
+            border-top: 6px solid var(--primary);
+        }
+
+        #course-select { 
+            padding: 12px 20px; 
+            font-size: 1rem; 
+            margin-bottom: 30px; 
+            border-radius: 10px; 
+            border: 2px solid #ddd;
+            width: 100%;
+            outline: none;
+            cursor: pointer;
+        }
+
+        #course-select:focus { border-color: var(--primary); }
+
+        .question-box h3 { font-size: 1.3rem; margin-bottom: 20px; color: #333; }
+
+        .options { list-style: none; padding: 0; }
+
+        .option { 
+            padding: 15px 20px; 
+            border: 2px solid #eee; 
+            margin-bottom: 12px; 
+            border-radius: 12px; 
+            cursor: pointer; 
+            transition: 0.3s all ease; 
+            font-weight: 500;
+            color: #555;
+        }
+
+        .option:hover { background: var(--light-blue); border-color: var(--primary); color: var(--primary); }
+
+        /* Status Colors */
+        .option.correct { background: #d4edda !important; border-color: #28a745 !important; color: #155724 !important; }
+        .option.wrong { background: #f8d7da !important; border-color: #dc3545 !important; color: #721c24 !important; }
+        .option.selected { border-color: var(--primary); background: var(--light-blue); }
+
+        #quiz-result { 
+            display: none; 
+            text-align: center; 
+            padding: 30px; 
+            background: var(--light-blue); 
+            border-radius: 15px; 
+        }
+
+        .btn-submit {
+            width: 100%;
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 10px;
+        }
+
+        .btn-submit:hover { background: var(--secondary); transform: translateY(-2px); }
+
+       
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">EduSmart 🎓</a>
+        <div class="menu-toggle" id="mobile-menu">&#9776;</div>
+        <ul class="nav-links">
+            <li><a href="index.html" >Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="notes.html">Notes</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <div class="container">
+        <div class="quiz-container">
+            <h2 style="text-align:center; color: var(--primary); margin-bottom: 10px;">Test Your Knowledge</h2>
+            <p style="text-align:center; color: #777; margin-bottom: 30px;">Select a subject to start the interactive test.</p>
+            
+            <select id="course-select">
+                <option value="cyber">Cyber Security (Basics)</option>
+                <option value="webdev">Web Development (HTML/CSS/JS)</option>
+                <option value="freelance">Freelancing (Fiverr/Upwork)</option>
+                <option value="seo">SEO & Digital Marketing</option>
+                <option value="datascience">Data Science (Python/AI)</option>
+                <option value="graphics">Graphic Design (UI/UX)</option>
+            </select>
+            
+            <div id="quiz-area">
+                <div class="question-box">
+                    <h3 id="question">Question goes here?</h3>
+                </div>
+                <ul class="options" id="options"></ul>
+                <button class="btn-submit" id="submit-btn" style="display:none;">Confirm Answer</button>
+            </div>
+
+            <div id="quiz-result">
+                <h3>Quiz Completed! 🎉</h3>
+                <p style="font-size: 1.2rem;">Your Score: <span id="score">0</span> / <span id="total">0</span></p>
+                <button class="btn-submit" onclick="location.reload()" style="margin-top: 20px;">Restart Quiz</button>
+            </div>
+        </div>
+    </div>
+    <footer style="background:#002147; color:#ffffff; padding:60px 20px 25px;">
+    
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:30px; max-width:1200px; margin:auto;">
+        
+        <!-- Logo & About -->
+        <div>
+            <h2 style="margin-bottom:15px; color:#ffffff;">EduSmart 🎓</h2>
+            <p style="font-size:15px; line-height:1.8; color:#ffffff;">
+                Empowering students with modern digital skills and helping them build successful careers in Pakistan and beyond.
+            </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+            <h3 style="margin-bottom:15px; color:#ffffff;">Quick Links</h3>
+            <ul style="list-style:none; padding:0; font-size:15px;">
+                <li><a href="index.html" style="color:#ffffff; text-decoration:none;">Home</a></li>
+                <li><a href="courses.html" style="color:#ffffff; text-decoration:none;">Courses</a></li>
+                <li><a href="notes.html" style="color:#ffffff; text-decoration:none;">Notes</a></li>
+                <li><a href="quiz.html" style="color:#ffffff; text-decoration:none;">Quiz</a></li>
+            </ul>
+        </div>
+
+        <!-- Resources -->
+        <div>
+            <h3 style="margin-bottom:15px; color:#ffffff;">Resources</h3>
+            <ul style="list-style:none; padding:0; font-size:15px;">
+                <li><a href="blog.html" style="color:#ffffff; text-decoration:none;">Blog</a></li>
+                <li><a href="about.html" style="color:#ffffff; text-decoration:none;">About</a></li>
+                <li><a href="contact.html" style="color:#ffffff; text-decoration:none;">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+            <h3 style="margin-bottom:15px; color:#ffffff;">Contact</h3>
+            <p style="font-size:15px; color:#ffffff;">📍 Pakistan</p>
+            <p style="font-size:15px; color:#ffffff;">📧 info@edusmart.pk</p>
+        </div>
+
+    </div>
+
+    <!-- Bottom Bar -->
+    <div style="text-align:center; margin-top:35px; border-top:1px solid #ffffff; padding-top:15px; font-size:14px; color:#ffffff;">
+        <p>&copy; 2026 EduSmart Pakistan | All Rights Reserved <br> Build with 💙 for Students & Professionals.</p>
+    </div>
+
+</footer>
+
+    <script>
+        const quizData = {
+            cyber: [
+                { q: "What does 'VPN' stand for?", a: "Virtual Private Network", o: ["Virtual Public Network", "Virtual Private Network", "Verified Private Node"] },
+                { q: "Which type of attack involves tricking users into revealing passwords?", a: "Phishing", o: ["DDoS", "Phishing", "SQL Injection"] },
+                { q: "A 'Firewall' is mainly used for?", a: "Network Monitoring", o: ["Network Monitoring", "Data Storage", "Editing Code"] }
+            ],
+            webdev: [
+                { q: "Which CSS property controls the text size?", a: "font-size", o: ["text-style", "font-weight", "font-size"] },
+                { q: "Inside which HTML element do we put the JavaScript?", a: "<script>", o: ["<js>", "<javascript>", "<script>"] }
+            ],
+            freelance: [
+                { q: "What is the service offered on Fiverr called?", a: "Gig", o: ["Job", "Gig", "Project"] },
+                { q: "Which platform is famous for hourly-based professional contracts?", a: "Upwork", o: ["Upwork", "Fiverr", "LinkedIn"] }
+            ],
+            seo: [
+                { q: "What does SEO stand for?", a: "Search Engine Optimization", o: ["Search Engine Optimization", "Social Engine Operation", "Site Efficiency Output"] },
+                { q: "Which of these is an 'On-Page' SEO factor?", a: "Meta Tags", o: ["Backlinks", "Meta Tags", "Guest Posting"] }
+            ],
+            datascience: [
+                { q: "Which Python library is mostly used for data manipulation?", a: "Pandas", o: ["Pandas", "Pygame", "Flask"] },
+                { q: "In Data Science, 'Cleaning Data' is also known as?", a: "Data Wrangling", o: ["Data Wrangling", "Data Mining", "Data Storage"] }
+            ],
+            graphics: [
+                { q: "Which color mode is used for printing materials?", a: "CMYK", o: ["RGB", "CMYK", "HSB"] },
+                { q: "Vector graphics are mostly created in which software?", a: "Adobe Illustrator", o: ["Photoshop", "Adobe Illustrator", "MS Paint"] }
+            ]
+        };
+
+        let currentCourse = "cyber"; 
+        let currentQuestionIndex = 0;
+        let score = 0;
+        let selectedValue = null;
+
+        const questionEl = document.getElementById('question');
+        const optionsEl = document.getElementById('options');
+        const submitBtn = document.getElementById('submit-btn');
+        const courseSelect = document.getElementById('course-select');
+        const resultEl = document.getElementById('quiz-result');
+        const quizArea = document.getElementById('quiz-area');
+
+        function loadQuestion() {
+            selectedValue = null;
+            submitBtn.style.display = 'none';
+            const data = quizData[currentCourse][currentQuestionIndex];
+            questionEl.innerText = `${currentQuestionIndex + 1}. ${data.q}`;
+            optionsEl.innerHTML = '';
+            
+            data.o.forEach(option => {
+                const li = document.createElement('li');
+                li.innerText = option;
+                li.className = 'option';
+                li.onclick = () => selectOption(li, option);
+                optionsEl.appendChild(li);
+            });
+        }
+
+        function selectOption(el, val) {
+            const allOptions = document.querySelectorAll('.option');
+            allOptions.forEach(op => op.classList.remove('selected'));
+            el.classList.add('selected');
+            selectedValue = val;
+            submitBtn.style.display = 'block';
+        }
+
+        submitBtn.onclick = () => {
+            const data = quizData[currentCourse][currentQuestionIndex];
+            const allOptions = document.querySelectorAll('.option');
+            let isCorrect = (selectedValue === data.a);
+
+            allOptions.forEach(li => {
+                if(li.innerText === data.a) li.classList.add('correct');
+                if(li.innerText === selectedValue && !isCorrect) li.classList.add('wrong');
+                li.style.pointerEvents = 'none'; 
+            });
+
+            if(isCorrect) score++;
+
+            submitBtn.style.display = 'none';
+            setTimeout(() => {
+                currentQuestionIndex++;
+                if(currentQuestionIndex < quizData[currentCourse].length) {
+                    loadQuestion();
+                } else {
+                    quizArea.style.display = 'none';
+                    resultEl.style.display = 'block';
+                    document.getElementById('score').innerText = score;
+                    document.getElementById('total').innerText = quizData[currentCourse].length;
+                }
+            }, 1500);
+        };
+
+        courseSelect.onchange = (e) => {
+            currentCourse = e.target.value;
+            currentQuestionIndex = 0;
+            score = 0;
+            quizArea.style.display = 'block';
+            resultEl.style.display = 'none';
+            loadQuestion();
+        };
+
+        loadQuestion();
+
+        // Mobile menu toggle script
+        document.getElementById('mobile-menu').onclick = function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        };
+    </script>
+</body>
+</html>

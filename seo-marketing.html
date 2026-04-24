@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEO & Digital Marketing | EduSmart</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Header matching your website's Blue/Purple Theme */
+        .seo-hero {
+            background: linear-gradient(45deg, #007bff, #00c6ff);
+            color: white;
+            padding: 80px 5%;
+            text-align: center;
+        }
+        .info-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .info-box {
+            background: #fff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-top: 5px solid #007bff;
+            transition: 0.3s;
+        }
+        .info-box:hover {
+            transform: translateY(-10px);
+        }
+        /* Style for clickable list items */
+        .info-box ul {
+            list-style: none;
+            padding: 0;
+            margin: 15px 0;
+        }
+        .info-box ul li {
+            margin-bottom: 10px;
+        }
+        .info-box ul li a {
+            text-decoration: none;
+            color: #555;
+            font-size: 0.95rem;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+        }
+        .info-box ul li a:hover {
+            color: #007bff;
+            padding-left: 5px;
+        }
+        .info-box ul li a::before {
+            content: "→";
+            margin-right: 8px;
+            color: #007bff;
+        }
+        .resource-link {
+            display: block;
+            background: #f8f9fa;
+            padding: 15px;
+            margin-top: 10px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: 0.3s;
+            border: 1px solid #eee;
+            text-align: center;
+        }
+        .resource-link:hover {
+            background: #007bff;
+            color: white;
+        }
+        .learning-path {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            margin-top: 50px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .resource-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">EduSmart 🎓</a>
+        <div class="menu-toggle" id="mobile-menu">&#9776;</div>
+        <ul class="nav-links">
+            <li><a href="index.html" >Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="notes.html">Notes</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+
+
+    <header class="seo-hero">
+        <h1 style="color: white;">Master Digital Marketing & SEO</h1>
+        <p>Rank websites at the top of Google and scale businesses globally.</p>
+    </header>
+
+    <div class="container">
+        <div class="learning-path">
+            <h2>Why Learn Digital Marketing?</h2>
+            <p style="color: #666; font-size: 1.1rem; line-height: 1.8;">
+                In today's hyper-connected world, every business requires a strong online presence to survive. By mastering Digital Marketing, you gain the power to bridge the gap between brands and their ideal customers. 
+                <br><br>
+                This skill set allows you to leverage data-driven strategies to increase visibility and maximize conversions. Whether you aim to launch your own agency or dominate the freelancing market, Digital Marketing is your gateway to a high-paying career.
+            </p>
+        </div>
+
+        <div class="info-section">
+            <div class="info-box">
+                <h3>Search Engine Optimization</h3>
+                <p>Master organic growth and Google ranking factors.</p>
+                <ul>
+                    <li><a href="https://moz.com/beginners-guide-to-seo" target="_blank">Beginner's Guide to SEO</a></li>
+                    <li><a href="https://ahrefs.com/blog/seo-basics/" target="_blank">SEO Basics & Tips</a></li>
+                    <li><a href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide" target="_blank">Google's Official SEO Guide</a></li>
+                </ul>
+            </div>
+
+            <div class="info-box" style="border-top-color: #00c6ff;">
+                <h3>Social Media Ads</h3>
+                <p>Learn professional paid advertising on major social platforms.</p>
+                <ul>
+                    <li><a href="https://www.socialmediaexaminer.com/getting-started-facebook-ads/" target="_blank">Facebook Ads Beginner Guide</a></li>
+                    <li><a href="https://adespresso.com/guides/facebook-ads-beginner/" target="_blank">Paid Social Campaign Tips</a></li>
+                    <li><a href="https://www.hubspot.com/digital-marketing/social-media-advertising" target="_blank">Social Media Strategy</a></li>
+                </ul>
+            </div>
+
+            <div class="info-box" style="border-top-color: #6c757d;">
+                <h3>Content Strategy</h3>
+                <p>Create high-converting content for brands and businesses.</p>
+                <ul>
+                    <li><a href="https://copyblogger.com/content-marketing/" target="_blank">Content Marketing 101</a></li>
+                    <li><a href="https://www.semrush.com/blog/content-marketing-strategy-guide/" target="_blank">Strategy & Planning</a></li>
+                    <li><a href="https://mailchimp.com/resources/email-marketing-field-guide/" target="_blank">Email Marketing Guide</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="learning-path" style="border: 1px dashed #007bff;">
+            <h2 style="text-align: center;">Authentic Learning Resources</h2>
+            <p style="text-align: center; margin-bottom: 30px;">Direct access to official certifications and expert mentorship:</p>
+            
+            <div class="resource-grid">
+                <div style="text-align: center; padding: 15px;">
+                    <h4>Google Digital Garage</h4>
+                    <p style="font-size: 0.9rem; color: #666; margin-bottom: 10px;">Free certification from Google.</p>
+                    <a href="https://skillshop.withgoogle.com/" target="_blank" class="resource-link">Open Course</a>
+                </div>
+                <div style="text-align: center; padding: 15px;">
+                    <h4>Hisham Sarwar</h4>
+                    <p style="font-size: 0.9rem; color: #666; margin-bottom: 10px;">Top-rated Digital Marketing mentor.</p>
+                    <a href="https://www.youtube.com/@HishamSarwar" target="_blank" class="resource-link">Watch on YouTube</a>
+                </div>
+                <div style="text-align: center; padding: 15px;">
+                    <h4>HubSpot Academy</h4>
+                    <p style="font-size: 0.9rem; color: #666; margin-bottom: 10px;">Industry recognized certifications.</p>
+                    <a href="https://academy.hubspot.com/courses/digital-marketing" target="_blank" class="resource-link">Access Academy</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer style="background:#002147; color:#ffffff; padding:60px 20px 25px;">
+    
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:30px; max-width:1200px; margin:auto;">
+        
+        <!-- Logo & About -->
+        <div>
+            <h2 style="margin-bottom:15px; color:#ffffff;">EduSmart 🎓</h2>
+            <p style="font-size:15px; line-height:1.8; color:#ffffff;">
+                Empowering students with modern digital skills and helping them build successful careers in Pakistan and beyond.
+            </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+            <h3 style="margin-bottom:15px; color:#ffffff;">Quick Links</h3>
+            <ul style="list-style:none; padding:0; font-size:15px;">
+                <li><a href="index.html" style="color:#ffffff; text-decoration:none;">Home</a></li>
+                <li><a href="courses.html" style="color:#ffffff; text-decoration:none;">Courses</a></li>
+                <li><a href="notes.html" style="color:#ffffff; text-decoration:none;">Notes</a></li>
+                <li><a href="quiz.html" style="color:#ffffff; text-decoration:none;">Quiz</a></li>
+            </ul>
+        </div>
+
+        <!-- Resources -->
+        <div>
+            <h3 style="margin-bottom:15px; color:#ffffff;">Resources</h3>
+            <ul style="list-style:none; padding:0; font-size:15px;">
+                <li><a href="blog.html" style="color:#ffffff; text-decoration:none;">Blog</a></li>
+                <li><a href="about.html" style="color:#ffffff; text-decoration:none;">About</a></li>
+                <li><a href="contact.html" style="color:#ffffff; text-decoration:none;">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+            <h3 style="margin-bottom:15px; color:#ffffff;">Contact</h3>
+            <p style="font-size:15px; color:#ffffff;">📍 Pakistan</p>
+            <p style="font-size:15px; color:#ffffff;">📧 info@edusmart.pk</p>
+        </div>
+
+    </div>
+
+    <!-- Bottom Bar -->
+    <div style="text-align:center; margin-top:35px; border-top:1px solid #ffffff; padding-top:15px; font-size:14px; color:#ffffff;">
+        <p>&copy; 2026 EduSmart Pakistan | All Rights Reserved <br> Build with 💙 for Students & Professionals.</p>
+    </div>
+
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Blog | EduSmart</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #007bff;
+            --dark-blue: #0056b3;
+            --light-bg: #f4f7fa;
+            --text-main: #1e272e;
+            --text-muted: #576574;
+            --white: #ffffff;
+            --accent-blue: #e3f2fd;
+        }
+        
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            background-color: var(--light-bg); 
+            color: var(--text-main); 
+            margin: 0; 
+            line-height: 1.6;
+        }
+
+        /* --- Navigation Bar --- */
+        nav {
+            background: var(--white);
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo { font-size: 1.5rem; font-weight: 700; color: var(--primary-blue); text-decoration: none; }
+        .nav-links { list-style: none; display: flex; gap: 25px; margin: 0; }
+        .nav-links a { text-decoration: none; color: var(--text-main); font-weight: 500; transition: 0.3s; }
+        .nav-links a:hover { color: var(--primary-blue); }
+
+        /* Container */
+        .container { max-width: 1200px; margin: 0 auto; padding: 60px 20px; }
+
+        /* Blog Header */
+        .blog-header { text-align: center; margin-bottom: 60px; }
+        .blog-header h1 { font-size: 2.8rem; color: var(--primary-blue); margin-bottom: 10px; font-weight: 700; }
+        .header-line { width: 60px; height: 4px; background: var(--primary-blue); margin: 15px auto; border-radius: 2px; }
+
+        /* Blog Grid */
+        .blog-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); 
+            gap: 35px; 
+        }
+
+        /* Blog Card */
+        .blog-card { 
+            background: var(--white); 
+            border-radius: 20px; 
+            overflow: hidden; 
+            transition: 0.4s ease;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.02);
+            border: 1px solid rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+        }
+        .blog-card:hover { transform: translateY(-10px); box-shadow: 0 15px 35px rgba(0,123,255,0.1); }
+
+        .blog-img-wrapper { position: relative; width: 100%; height: 220px; overflow: hidden; background: #eee; }
+        .blog-img { width: 100%; height: 100%; object-fit: cover; transition: 0.6s; }
+        .blog-card:hover .blog-img { transform: scale(1.08); }
+
+        .badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: var(--primary-blue);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            z-index: 2;
+        }
+
+        .blog-content { padding: 25px; display: flex; flex-direction: column; flex-grow: 1; }
+        .blog-meta { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 10px; }
+        .blog-title { font-size: 1.4rem; margin: 0 0 15px 0; color: #1a1a1a; line-height: 1.3; }
+        .blog-excerpt { font-size: 0.92rem; color: var(--text-muted); margin-bottom: 25px; flex-grow: 1; }
+
+        /* Buttons */
+        .blog-btn { 
+            background: var(--accent-blue);
+            color: var(--primary-blue);
+            text-decoration: none;
+            font-weight: 700;
+            padding: 12px 20px;
+            border-radius: 10px;
+            text-align: center;
+            transition: 0.3s;
+        }
+        .blog-btn:hover { background: var(--primary-blue); color: white; }
+
+        @media (max-width: 768px) {
+            nav { padding: 15px 20px; }
+            .blog-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">EduSmart 🎓</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="notes.html">Notes</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <div class="container">
+        <header class="blog-header">
+            <h1>EduSmart Knowledge Hub 📘</h1>
+            <div class="header-line"></div>
+            <p>Professional articles to help you master the digital world.</p>
+        </header>
+
+        <div class="blog-grid">
+            
+            <article class="blog-card">
+                <div class="blog-img-wrapper">
+                    <span class="badge">Security</span>
+                    <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600" alt="Cyber Security" class="blog-img">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">📅 April 12, 2026</div>
+                    <h2 class="blog-title">Modern Threat Defense: Stay Safe Online</h2>
+                    <p class="blog-excerpt">Master the fundamentals of ethical hacking and network security to safeguard your valuable digital assets.</p>
+                    <a href="https://www.cisco.com/c/en/us/products/security/what-is-cybersecurity.html" target="_blank" class="blog-btn">Read More</a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-img-wrapper">
+                    <span class="badge">Development</span>
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600" alt="Web Dev" class="blog-img">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">📅 April 10, 2026</div>
+                    <h2 class="blog-title">Full Stack Roadmap 2026</h2>
+                    <p class="blog-excerpt">A comprehensive guide from HTML basics to advanced React, covering everything you need to become a pro developer.</p>
+                    <a href="https://developer.mozilla.org/en-US/docs/Learn" target="_blank" class="blog-btn">View Roadmap</a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-img-wrapper">
+                    <span class="badge">Freelancing</span>
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600" alt="Freelancing" class="blog-img">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">📅 April 09, 2026</div>
+                    <h2 class="blog-title">How to Win High-Ticket Clients</h2>
+                    <p class="blog-excerpt">Discover proven secrets for success on Upwork and Fiverr to accelerate your global freelancing career.</p>
+                    <a href="https://www.upwork.com/resources/how-to-guide-freelance" target="_blank" class="blog-btn">Get Guide</a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-img-wrapper">
+                    <span class="badge">Marketing</span>
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600" alt="SEO" class="blog-img">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">📅 April 07, 2026</div>
+                    <h2 class="blog-title">Mastering Search Engine Optimization</h2>
+                    <p class="blog-excerpt">Implement modern strategies and latest Google ranking trends that are delivering results in 2026.</p>
+                    <a href="https://backlinko.com/hub/seo/search-intent" target="_blank" class="blog-btn">Master SEO</a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-img-wrapper">
+                    <span class="badge">Data Science</span>
+                    <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=600&q=80" alt="Data Science & AI" class="blog-img">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">📅 April 05, 2026</div>
+                    <h2 class="blog-title">The Power of AI & Big Data</h2>
+                    <p class="blog-excerpt">Explore how Artificial Intelligence and Machine Learning are revolutionizing daily life and modern business.</p>
+                    <a href="https://towardsdatascience.com/data-science/home" target="_blank" class="blog-btn">Explore AI</a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-img-wrapper">
+                    <span class="badge">Design</span>
+                    <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?w=600" alt="Graphic Design" class="blog-img">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">📅 April 03, 2026</div>
+                    <h2 class="blog-title">Visual Storytelling & Branding</h2>
+                    <p class="blog-excerpt">Learn essential design principles and color theory to create high-impact visuals that resonate with audiences.</p>
+                    <a href="https://www.interaction-design.org/literature/topics/visual-design" target="_blank" class="blog-btn">Start Designing</a>
+                </div>
+            </article>
+
+        </div>
+    </div>
+
+    <footer style="background:#002147; color:#ffffff; padding:60px 20px 25px;">
+    
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:30px; max-width:1200px; margin:auto;">
+        
+        <!-- Logo & About -->
+        <div>
+            <h2 style="margin-bottom:15px; color:#ffffff;">EduSmart 🎓</h2>
+            <p style="font-size:15px; line-height:1.8; color:#ffffff;">
+                Empowering students with modern digital skills and helping them build successful careers in Pakistan and beyond.
+            </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+            <h3 style="margin-bottom:15px; color:#ffffff;">Quick Links</h3>
+            <ul style="list-style:none; padding:0; font-size:15px;">
+                <li><a href="index.html" style="color:#ffffff; text-decoration:none;">Home</a></li>
+                <li><a href="courses.html" style="color:#ffffff; text-decoration:none;">Courses</a></li>
+                <li><a href="notes.html" style="color:#ffffff; text-decoration:none;">Notes</a></li>
+                <li><a href="quiz.html" style="color:#ffffff; text-decoration:none;">Quiz</a></li>
+            </ul>
+        </div>
+
+        <!-- Resources -->
+        <div>
+            <h3 style="margin-bottom:15px; color:#ffffff;">Resources</h3>
+            <ul style="list-style:none; padding:0; font-size:15px;">
+                <li><a href="blog.html" style="color:#ffffff; text-decoration:none;">Blog</a></li>
+                <li><a href="about.html" style="color:#ffffff; text-decoration:none;">About</a></li>
+                <li><a href="contact.html" style="color:#ffffff; text-decoration:none;">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+            <h3 style="margin-bottom:15px; color:#ffffff;">Contact</h3>
+            <p style="font-size:15px; color:#ffffff;">📍 Pakistan</p>
+            <p style="font-size:15px; color:#ffffff;">📧 info@edusmart.pk</p>
+        </div>
+
+    </div>
+
+    <!-- Bottom Bar -->
+    <div style="text-align:center; margin-top:35px; border-top:1px solid #ffffff; padding-top:15px; font-size:14px; color:#ffffff;">
+        <p>&copy; 2026 EduSmart Pakistan | All Rights Reserved <br> Build with 💙 for Students & Professionals.</p>
+    </div>
+
+</footer>
+
+
+    <script>
+        document.getElementById('mobile-menu').onclick = function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        };
+    </script>
+
+
+</body>
+</html>

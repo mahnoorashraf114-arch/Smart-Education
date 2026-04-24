@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | EduSmart</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .contact-form { background: white; padding: 40px; border-radius: 12px; box-shadow: var(--shadow); max-width: 600px; margin: auto; }
+        input, textarea { width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 5px; }
+        textarea { height: 150px; }
+
+    
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">EduSmart 🎓</a>
+        <div class="menu-toggle" id="mobile-menu">&#9776;</div>
+        <ul class="nav-links">
+            <li><a href="index.html" >Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="notes.html">Notes</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="contact-form">
+            <h2 style="text-align:center">Get in Touch</h2>
+            <p style="text-align:center; color:#777; margin-bottom:30px">Have any questions? Send us a message.</p>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn" style="width:100%">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <footer style="background:#002147; color:#ffffff; padding:60px 20px 25px;">
+    
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:30px; max-width:1200px; margin:auto;">
+        
+        <!-- Logo & About -->
+        <div>
+            <h2 style="margin-bottom:15px; color:#ffffff;">EduSmart 🎓</h2>
+            <p style="font-size:15px; line-height:1.8; color:#ffffff;">
+                Empowering students with modern digital skills and helping them build successful careers in Pakistan and beyond.
+            </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+            <h3 style="margin-bottom:15px; color:#ffffff;">Quick Links</h3>
+            <ul style="list-style:none; padding:0; font-size:15px;">
+                <li><a href="index.html" style="color:#ffffff; text-decoration:none;">Home</a></li>
+                <li><a href="courses.html" style="color:#ffffff; text-decoration:none;">Courses</a></li>
+                <li><a href="notes.html" style="color:#ffffff; text-decoration:none;">Notes</a></li>
+                <li><a href="quiz.html" style="color:#ffffff; text-decoration:none;">Quiz</a></li>
+            </ul>
+        </div>
+
+        <!-- Resources -->
+        <div>
+            <h3 style="margin-bottom:15px; color:#ffffff;">Resources</h3>
+            <ul style="list-style:none; padding:0; font-size:15px;">
+                <li><a href="blog.html" style="color:#ffffff; text-decoration:none;">Blog</a></li>
+                <li><a href="about.html" style="color:#ffffff; text-decoration:none;">About</a></li>
+                <li><a href="contact.html" style="color:#ffffff; text-decoration:none;">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+            <h3 style="margin-bottom:15px; color:#ffffff;">Contact</h3>
+            <p style="font-size:15px; color:#ffffff;">📍 Pakistan</p>
+            <p style="font-size:15px; color:#ffffff;">📧 info@edusmart.pk</p>
+        </div>
+
+    </div>
+
+    <!-- Bottom Bar -->
+    <div style="text-align:center; margin-top:35px; border-top:1px solid #ffffff; padding-top:15px; font-size:14px; color:#ffffff;">
+        <p>&copy; 2026 EduSmart Pakistan | All Rights Reserved <br> Build with 💙 for Students & Professionals.</p>
+    </div>
+
+</footer>
+
+
+    <script>
+        document.getElementById('mobile-menu').onclick = function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        };
+    </script>
+</body>
+</html>

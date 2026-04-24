@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freelancing Masterclass | EduSmart</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Header & Hero Matching Website Theme */
+        .freelance-hero {
+            background: linear-gradient(rgba(0, 31, 63, 0.8), rgba(0, 123, 255, 0.7)), url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1500&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 5%;
+            text-align: center;
+        }
+        .stats-container {
+            display: flex;
+            justify-content: space-around;
+            background: #fff;
+            padding: 40px;
+            border-radius: 15px;
+            margin-top: -50px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .stat-item h2 { color: #007bff; font-size: 2.5rem; margin-bottom: 5px; }
+        .stat-item p { color: #666; font-weight: 500; }
+
+        .platform-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+        
+        .platform-link { text-decoration: none; color: inherit; display: block; }
+        .platform-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid #eee;
+            padding: 30px;
+            border-radius: 10px;
+            transition: 0.3s;
+            height: 100%;
+        }
+        .platform-card:hover { border-color: #007bff; background: #f0f7ff; transform: translateY(-5px); }
+
+        .syllabus-section { background: #fff; padding: 60px 5%; border-radius: 20px; margin-top: 50px; }
+        
+        .syllabus-link { text-decoration: none; color: inherit; display: block; }
+        .syllabus-item {
+            border-bottom: 1px solid #eee;
+            padding: 20px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: 0.2s;
+        }
+        .syllabus-item:hover { background: #f8f9fa; border-radius: 8px; }
+        .check-mark { color: #28a745; font-weight: bold; margin-right: 10px; }
+        
+        /* Matching Badge Style */
+        .tech-badge {
+            background: #eef6ff;
+            color: #007bff;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .resource-btn {
+            display: inline-block;
+            background: #007bff;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 10px;
+            transition: 0.3s;
+        }
+        .resource-btn:hover { background: #0056b3; transform: scale(1.05); }
+
+        @media (max-width: 768px) {
+            .stats-container { flex-direction: column; gap: 30px; margin-top: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">EduSmart 🎓</a>
+        <div class="menu-toggle" id="mobile-menu">&#9776;</div>
+        <ul class="nav-links">
+            <li><a href="index.html" >Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="notes.html">Notes</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <header class="freelance-hero">
+        <h1 style="color: white;">Freelancing Masterclass</h1>
+        <p>Master the world's top marketplaces and start your global career today.</p>
+    </header>
+
+    <div class="container">
+        <div class="stats-container">
+            <div class="stat-item">
+                <h2>15k+</h2>
+                <p>Pros Trained</p>
+            </div>
+            <div class="stat-item">
+                <h2>$10M+</h2>
+                <p>Student Revenue</p>
+            </div>
+            <div class="stat-item">
+                <h2>Top Tier</h2>
+                <p>Mentorship</p>
+            </div>
+        </div>
+
+        <section style="margin-top: 80px;">
+            <h2 class="section-title" style="text-align: center; color: #004e92;">Dominating the Marketplaces</h2>
+            <div class="platform-grid">
+                <a href="https://www.fiverr.com/start_selling" target="_blank" class="platform-link">
+                    <div class="platform-card">
+                        <h3>Fiverr Mastery ↗</h3>
+                        <p>Unlock the secrets of Gig SEO and learn how to rank on the first page to get constant orders.</p>
+                    </div>
+                </a>
+                <a href="https://share.google/9HTrBGBAIfUL9nDyp" target="_blank" class="platform-link">
+                    <div class="platform-card">
+                        <h3>Upwork Success ↗</h3>
+                        <p>Focus on high-ticket clients. Master the art of writing winning proposals and hourly bidding.</p>
+                    </div>
+                </a>
+                <a href="https://www.linkedin.com/profinder" target="_blank" class="platform-link">
+                    <div class="platform-card">
+                        <h3>Direct Clients ↗</h3>
+                        <p>Learn to use LinkedIn to find international companies and close deals outside of marketplaces.</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section class="syllabus-section">
+            <h2 style="text-align: center; margin-bottom: 40px; color: #004e92;">Pro Freelancer Curriculum</h2>
+            
+            <a href="https://www.fiverr.com/support/articles/360010451397-Creating-a-Professional-Profile" target="_blank" class="syllabus-link">
+                <div class="syllabus-item">
+                    <span><span class="check-mark">✓</span> Module 1: Fiverr Account & Gig Ranking SEO</span>
+                    <span class="tech-badge">Access Guide</span>
+                </div>
+            </a>
+            
+            <a href="https://share.google/OKRDCkbneFDMeU72U" target="_blank" class="syllabus-link">
+                <div class="syllabus-item">
+                    <span><span class="check-mark">✓</span> Module 2: Upwork Profile Branding for Top-Rated Badge</span>
+                    <span class="tech-badge">Access Guide</span>
+                </div>
+            </a>
+            
+            <a href="https://share.google/h3olmOK0BVv1EQj6S" target="_blank" class="syllabus-link">
+                <div class="syllabus-item">
+                    <span><span class="check-mark">✓</span> Module 3: Proposal Writing & Client Psychology</span>
+                    <span class="tech-badge">Access Guide</span>
+                </div>
+            </a>
+            
+            <a href="https://www.google.com/aclk?sa=L&pf=1&ai=DChsSEwi5k7nG5OeTAxXzEAYAHTzXG0QYACICCAEQABoCd3M&co=1&ase=2&gclid=CjwKCAjwhe3OBhABEiwA6392zF8DNKdsLL85wR6P_pa2OegP9en9qvqAOesYjgapBaPBddh3PftzuBoCiwwQAvD_BwE&cid=CAAS3QHkaJPJc7lAXb2z9Z7N8LobxImHsEVr5UcVJ5uLV8O6w0PTuphWI8ihZeJbwwHGQobAgtI50-ZH6ZI1Xpj2P9Zuf1ophsFn1R_UqWvIU-O7GzoWc3fR_rth3gR340ilXY3ekAKYY3RPmna_64LWvLryiA-V78EKMvfFo1kN8sKgRKXgTWpDPPgZHtGsHhoIKOtPIZpeMUSsuoZloKNg9-FDSgJe1CQtsiyqCja6M0W4XcenuNWQsiVH0-b_45d3_6Nnb9I1UKIWdCj8MnH3fXTsL2tBmWu5DXk_oy8Rew&cce=2&category=acrcp_v1_32&sig=AOD64_1cnT0gpoJlO2pGmm1ADsF-ocqbpQ&q&nis=4&adurl=https://pages.payoneer.com/get-paid-by-clients-worldwide/?utm_source%3Dgoogle%26utm_medium%3Dcpc%26utm_campaign%3DReg_SE_B2B_APAC_PK_NonBrand_AIMax%26CampaignID%3D22059602572%26utm_content%3Dphrase_payment_gateway%26AdgroupID%3D171240903570%26utm_term%3Dpayment%2520gateway%26Ad%3Dpk_25q2_payment_gateway%26adid%3D753881223113%26Placement%3Dc%26gad_source%3D1%26gad_campaignid%3D22059602572%26gbraid%3D0AAAAADmHOcjTJp_mamNr7aPpXd-4dXTQO%26gclid%3DCjwKCAjwhe3OBhABEiwA6392zF8DNKdsLL85wR6P_pa2OegP9en9qvqAOesYjgapBaPBddh3PftzuBoCiwwQAvD_BwE&ved=2ahUKEwjK7rTG5OeTAxU6K_sDHSgVHDYQ0Qx6BAgQEAE" target="_blank" class="syllabus-link">
+                <div class="syllabus-item">
+                    <span><span class="check-mark">✓</span> Module 4: Secure Global Payments & Withdrawal</span>
+                    <span class="tech-badge">Access Guide</span>
+                </div>
+            </a>
+        </section>
+
+        <section style="text-align: center; margin-top: 80px; padding: 60px; background: #f8f9fa; border-radius: 15px; border: 2px dashed #007bff;">
+            <h2>Launch Your Freelance Career</h2>
+            <p style="margin-bottom: 30px; color: #666; font-size: 1.1rem;">Don't wait for opportunities—create them. Join thousands of successful freelancers by learning from the world's most trusted mentors:</p>
+            
+            <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+                <a href="https://www.youtube.com/@HishamSarwar" target="_blank" class="resource-btn">Hisham Sarwar (Masterclass)</a>
+                <a href="https://www.youtube.com/@AzadChaiwala" target="_blank" class="resource-btn" style="background: #e60023;">Azad Chaiwala (Skills)</a>
+                <a href="https://www.digiskills.pk/" target="_blank" class="resource-btn" style="background: #28a745;">DigiSkills (Govt. Program)</a>
+            </div>
+        </section>
+    </div>
+
+    <footer style="background:#002147; color:#ffffff; padding:60px 20px 25px;">
+    
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:30px; max-width:1200px; margin:auto;">
+        
+        <!-- Logo & About -->
+        <div>
+            <h2 style="margin-bottom:15px; color:#ffffff;">EduSmart 🎓</h2>
+            <p style="font-size:15px; line-height:1.8; color:#ffffff;">
+                Empowering students with modern digital skills and helping them build successful careers in Pakistan and beyond.
+            </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+            <h3 style="margin-bottom:15px; color:#ffffff;">Quick Links</h3>
+            <ul style="list-style:none; padding:0; font-size:15px;">
+                <li><a href="index.html" style="color:#ffffff; text-decoration:none;">Home</a></li>
+                <li><a href="courses.html" style="color:#ffffff; text-decoration:none;">Courses</a></li>
+                <li><a href="notes.html" style="color:#ffffff; text-decoration:none;">Notes</a></li>
+                <li><a href="quiz.html" style="color:#ffffff; text-decoration:none;">Quiz</a></li>
+            </ul>
+        </div>
+
+        <!-- Resources -->
+        <div>
+            <h3 style="margin-bottom:15px; color:#ffffff;">Resources</h3>
+            <ul style="list-style:none; padding:0; font-size:15px;">
+                <li><a href="blog.html" style="color:#ffffff; text-decoration:none;">Blog</a></li>
+                <li><a href="about.html" style="color:#ffffff; text-decoration:none;">About</a></li>
+                <li><a href="contact.html" style="color:#ffffff; text-decoration:none;">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+            <h3 style="margin-bottom:15px; color:#ffffff;">Contact</h3>
+            <p style="font-size:15px; color:#ffffff;">📍 Pakistan</p>
+            <p style="font-size:15px; color:#ffffff;">📧 info@edusmart.pk</p>
+        </div>
+
+    </div>
+
+    <!-- Bottom Bar -->
+    <div style="text-align:center; margin-top:35px; border-top:1px solid #ffffff; padding-top:15px; font-size:14px; color:#ffffff;">
+        <p>&copy; 2026 EduSmart Pakistan | All Rights Reserved <br> Build with 💙 for Students & Professionals.</p>
+    </div>
+
+</footer>
+
+
+    <script>
+        document.getElementById('mobile-menu').onclick = function(){
+            document.querySelector('.nav-links').classList.toggle('active');
+        };
+    </script>
+</body>
+</html>

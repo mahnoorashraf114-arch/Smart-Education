@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphic Design Masterclass | EduSmart</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* EduSmart Professional Blue Theme */
+        .design-hero {
+            background: linear-gradient(45deg, #007bff, #00c6ff), 
+                        url('https://images.unsplash.com/photo-1572044162444-ad60f128bde2?auto=format&fit=crop&w=1500&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 120px 5%;
+            text-align: center;
+        }
+
+        .container { 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            padding: 0 20px; 
+        }
+
+        /* Glassmorphism Effect for Learning Box */
+        .learning-box {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.06);
+            margin-top: 50px;
+            border-left: 8px solid #007bff;
+        }
+
+        .tool-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .tool-card {
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            border: 1px solid #eee;
+            text-align: center;
+            border-top: 5px solid #007bff;
+            transition: all 0.4s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .tool-card:hover { 
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,123,255,0.15);
+            border-color: #007bff;
+        }
+        
+        .section-tag {
+            color: #007bff;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1.5px;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .resource-btn {
+            display: inline-block;
+            background: #007bff;
+            color: white;
+            padding: 14px;
+            margin-top: 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .resource-btn:hover { 
+            background: #0056b3;
+            box-shadow: 0 5px 15px rgba(0,86,179,0.3);
+        }
+
+        .portfolio-sites {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .asset-link {
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+
+        .asset-link:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        
+        .nav-links li a { color: #333; text-decoration: none; font-weight: 500; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">EduSmart 🎓</a>
+        <div class="menu-toggle" id="mobile-menu">&#9776;</div>
+        <ul class="nav-links">
+            <li><a href="index.html" >Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="notes.html">Notes</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+
+
+    <header class="design-hero">
+        <h1 style="color: white; font-size: 3rem;">Master Graphic Designing</h1>
+        <p style="font-size: 1.2rem; opacity: 0.9;">Turn your creativity into professional visuals and high-paying freelance careers.</p>
+    </header>
+
+    <div class="container">
+        <div class="learning-box">
+            <span class="section-tag">Creative Roadmap</span>
+            <h2>What You Will Learn?</h2>
+            <p style="color: #555; line-height: 1.9; font-size: 1.05rem;">
+                Graphic design is the art of visual communication. In this comprehensive roadmap, we guide you through everything from basic color theory to advanced software mastery using industry-standard tools.
+            </p>
+            <ul style="margin-top: 20px; padding-left: 20px; color: #444; line-height: 2;">
+                <li><strong>Design Theory:</strong> Mastering Layout, Typography, and Color Psychology.</li>
+                <li><strong>Software Mastery:</strong> Professional training in Photoshop, Illustrator, and Canva.</li>
+                <li><strong>Freelancing:</strong> Building a stellar portfolio and selling on global marketplaces.</li>
+            </ul>
+            <a href="https://www.youtube.com/@SatoriGraphics" target="_blank" style="color: #007bff; font-weight: bold; text-decoration: none; display: inline-block; margin-top: 10px;">Watch Design Theory Playlist →</a>
+        </div>
+
+        <div class="tool-section">
+            <div class="tool-card">
+                <div>
+                    <span class="section-tag">Photo Editing</span>
+                    <h3 style="color: #333; margin-bottom: 10px;">Adobe Photoshop</h3>
+                    <p style="color: #666;">The world standard for photo editing, digital manipulation, and creative art.</p>
+                </div>
+                <a href="https://share.google/MvseF7bxpQ10n5Hzk" target="_blank" class="resource-btn">Full Photoshop Course →</a>
+            </div>
+
+            <div class="tool-card">
+                <div>
+                    <span class="section-tag">Vector Art</span>
+                    <h3 style="color: #333; margin-bottom: 10px;">Adobe Illustrator</h3>
+                    <p style="color: #666;">Master logo design, professional icons, and high-quality vector illustrations.</p>
+                </div>
+                <a href="https://share.google/Hk3kIBOAQrP6r388S" target="_blank" class="resource-btn">Full Illustrator Course →</a>
+            </div>
+
+            <div class="tool-card">
+                <div>
+                    <span class="section-tag">Quick Design</span>
+                    <h3 style="color: #333; margin-bottom: 10px;">Canva Masterclass</h3>
+                    <p style="color: #666;">Quickly create stunning social media posts, resumes, and branding assets.</p>
+                </div>
+                <a href="https://share.google/iHCpWWDhRarXiiNdf" target="_blank" class="resource-btn">Canva Full Tutorial →</a>
+            </div>
+        </div>
+
+        <div class="learning-box" style="background: #fdfdfd; border-left-color: #28a745; text-align: center;">
+            <span class="section-tag" style="color: #28a745;">Monetize Your Skills</span>
+            <h2>Freelancing for Designers</h2>
+            <p style="color: #555; margin-bottom: 30px;">Once you master the tools, learn how to build a business. These guides are curated from industry experts.</p>
+            <div class="portfolio-sites">
+                <a href="https://share.google/B9R1Wzv0LW2jOcmn5" target="_blank" class="asset-link" style="background: #1dbf73;">Fiverr Success Guide</a>
+                <a href="https://share.google/oiDYxK3HmPwps27eS" target="_blank" class="asset-link" style="background: #14a800;">Upwork Masterclass</a>
+                <a href="https://share.google/ZV9xuIcW5UfC3AZZ5" target="_blank" class="asset-link" style="background: #007bff;">Portfolio Building</a>
+            </div>
+        </div>
+
+        <div class="learning-box" style="background: #f8f9fa; border-left-color: #333; text-align: center;">
+            <span class="section-tag">Design Assets</span>
+            <h2>Best Free Resources & Inspiration</h2>
+            <p style="color: #555; margin-bottom: 25px;">Use these elite websites to find inspiration and download free high-quality design assets.</p>
+            <div class="portfolio-sites">
+                <a href="https://www.behance.net/" target="_blank" class="asset-link" style="background: #0057ff;">Behance</a>
+                <a href="https://www.freepik.com/" target="_blank" class="asset-link" style="background: #1273eb;">Freepik</a>
+                <a href="https://fonts.google.com/" target="_blank" class="asset-link" style="background: #ea4335;">Google Fonts</a>
+                <a href="https://www.flaticon.com/" target="_blank" class="asset-link" style="background: #00c4cc;">Flaticon</a>
+                <a href="https://www.pinterest.com/" target="_blank" class="asset-link" style="background: #bd081c;">Pinterest</a>
+            </div>
+        </div>
+    </div>
+<footer style="background:#002147; color:#ffffff; padding:60px 20px 25px;">
+    
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:30px; max-width:1200px; margin:auto;">
+        
+        <!-- Logo & About -->
+        <div>
+            <h2 style="margin-bottom:15px; color:#ffffff;">EduSmart 🎓</h2>
+            <p style="font-size:15px; line-height:1.8; color:#ffffff;">
+                Empowering students with modern digital skills and helping them build successful careers in Pakistan and beyond.
+            </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+            <h3 style="margin-bottom:15px; color:#ffffff;">Quick Links</h3>
+            <ul style="list-style:none; padding:0; font-size:15px;">
+                <li><a href="index.html" style="color:#ffffff; text-decoration:none;">Home</a></li>
+                <li><a href="courses.html" style="color:#ffffff; text-decoration:none;">Courses</a></li>
+                <li><a href="notes.html" style="color:#ffffff; text-decoration:none;">Notes</a></li>
+                <li><a href="quiz.html" style="color:#ffffff; text-decoration:none;">Quiz</a></li>
+            </ul>
+        </div>
+
+        <!-- Resources -->
+        <div>
+            <h3 style="margin-bottom:15px; color:#ffffff;">Resources</h3>
+            <ul style="list-style:none; padding:0; font-size:15px;">
+                <li><a href="blog.html" style="color:#ffffff; text-decoration:none;">Blog</a></li>
+                <li><a href="about.html" style="color:#ffffff; text-decoration:none;">About</a></li>
+                <li><a href="contact.html" style="color:#ffffff; text-decoration:none;">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+            <h3 style="margin-bottom:15px; color:#ffffff;">Contact</h3>
+            <p style="font-size:15px; color:#ffffff;">📍 Pakistan</p>
+            <p style="font-size:15px; color:#ffffff;">📧 info@edusmart.pk</p>
+        </div>
+
+    </div>
+
+    <!-- Bottom Bar -->
+    <div style="text-align:center; margin-top:35px; border-top:1px solid #ffffff; padding-top:15px; font-size:14px; color:#ffffff;">
+        <p>&copy; 2026 EduSmart Pakistan | All Rights Reserved <br> Build with 💙 for Students & Professionals.</p>
+    </div>
+
+</footer>
+
+
+    <script>
+        document.getElementById('mobile-menu').onclick = function(){
+            document.querySelector('.nav-links').classList.toggle('active');
+        };
+    </script>
+</body>
+</html>

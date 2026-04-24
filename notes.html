@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Notes | EduSmart</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --primary-blue: #007bff;
+            --light-bg: #f8f9fa;
+            --shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        body { font-family: 'Poppins', sans-serif; background-color: var(--light-bg); color: #333; }
+
+        .category-tabs { display: flex; justify-content: center; gap: 12px; margin-bottom: 40px; flex-wrap: wrap; }
+        .tab { 
+            padding: 10px 22px; 
+            background: white; 
+            border-radius: 25px; 
+            cursor: pointer; 
+            border: 1px solid #ddd; 
+            font-weight: 500; 
+            transition: 0.3s all ease;
+            color: #555;
+        }
+        .tab:hover { border-color: var(--primary-blue); color: var(--primary-blue); }
+        .tab.active { background: var(--primary-blue); color: white; border-color: var(--primary-blue); }
+        
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; padding: 20px 0; }
+
+        .card { 
+            background: white; 
+            padding: 30px; 
+            border-radius: 15px; 
+            box-shadow: var(--shadow); 
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+            border-top: 5px solid var(--primary-blue);
+        }
+        .card:hover { transform: translateY(-8px); }
+        .card h3 { color: var(--primary-blue); margin-bottom: 12px; font-size: 1.3rem; }
+        .card p { font-size: 0.9rem; color: #666; line-height: 1.6; margin-bottom: 20px; flex-grow: 1; }
+
+        .btn { 
+            display: inline-block; 
+            padding: 12px; 
+            background: var(--primary-blue); 
+            color: white; 
+            text-decoration: none; 
+            border-radius: 8px; 
+            text-align: center;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+        .btn:hover { background: #0056b3; box-shadow: 0 4px 12px rgba(0,123,255,0.3); }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">EduSmart 🎓</a>
+        <div class="menu-toggle" id="mobile-menu">&#9776;</div>
+        <ul class="nav-links">
+            <li><a href="index.html" >Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="notes.html">Notes</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <section class="container" style="padding: 60px 5%;">
+        <h2 style="text-align: center; font-size: 2.2rem; margin-bottom: 10px;">Study & Skill Notes</h2>
+        <p style="text-align: center; color: #777; margin-bottom: 40px;">Authentic resources for Academics and Professional Skills.</p>
+        
+        <div class="category-tabs">
+            <span class="tab active">All Courses</span>
+            <span class="tab">Cyber Security</span>
+            <span class="tab">Development</span>
+            <span class="tab">Marketing</span>
+            <span class="tab">Design</span>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <h3>Cyber Security Essentials</h3>
+                <p>Learn Ethical Hacking, Network Defense, and Web Security with hands-on labs and real-world attack scenarios.</p>
+                <a href="https://tryhackme.com/module/introduction-to-cyber-security" target="_blank" class="btn">Start Cyber Journey</a>
+            </div>
+
+            <div class="card">
+                <h3>Full Stack Web Dev</h3>
+                <p>Complete roadmap and cheatsheets for HTML, CSS, JavaScript, and React basics.</p>
+                <a href="https://quickref.me/javascript" target="_blank" class="btn">Open Web Cheatsheet</a>
+            </div>
+
+            <div class="card">
+                <h3>Freelancing Success</h3>
+                <p>Guide for Fiverr/Upwork profile optimization, bidding techniques, and client communication.</p>
+                <a href="https://www.hishamwaris.com/resources" target="_blank" class="btn">Get Success Guide</a>
+            </div>
+
+            <div class="card">
+                <h3>SEO & Marketing Pro</h3>
+                <p>On-page/Off-page SEO checklists and Social Media Marketing strategies for 2026.</p>
+                <a href="https://backlinko.com/seo-cheat-sheet" target="_blank" class="btn">View SEO Checklist</a>
+            </div>
+
+            <div class="card">
+                <h3>Data Science & AI</h3>
+                <p>Python for Data Science, Pandas, Numpy notes and Machine Learning basic algorithms.</p>
+                <a href="https://becominghuman.ai/cheat-sheets-for-ai-neural-networks-machine-learning-deep-learning-big-data-671063139851" target="_blank" class="btn">Download AI Notes</a>
+            </div>
+
+            <div class="card">
+                <h3>Graphic Design Guide</h3>
+                <p>Color theory, Typography, and Adobe Photoshop/Illustrator shortcut keys guide.</p>
+                <a href="https://www.canva.com/learn/design-principles/" target="_blank" class="btn">Open Design Principles</a>
+            </div>
+        </div>
+    </section>
+
+    <footer style="background:#002147; color:#ffffff; padding:60px 20px 25px;">
+    
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:30px; max-width:1200px; margin:auto;">
+        
+        <!-- Logo & About -->
+        <div>
+            <h2 style="margin-bottom:15px; color:#ffffff;">EduSmart 🎓</h2>
+            <p style="font-size:15px; line-height:1.8; color:#ffffff;">
+                Empowering students with modern digital skills and helping them build successful careers in Pakistan and beyond.
+            </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+            <h3 style="margin-bottom:15px; color:#ffffff;">Quick Links</h3>
+            <ul style="list-style:none; padding:0; font-size:15px;">
+                <li><a href="index.html" style="color:#ffffff; text-decoration:none;">Home</a></li>
+                <li><a href="courses.html" style="color:#ffffff; text-decoration:none;">Courses</a></li>
+                <li><a href="notes.html" style="color:#ffffff; text-decoration:none;">Notes</a></li>
+                <li><a href="quiz.html" style="color:#ffffff; text-decoration:none;">Quiz</a></li>
+            </ul>
+        </div>
+
+        <!-- Resources -->
+        <div>
+            <h3 style="margin-bottom:15px; color:#ffffff;">Resources</h3>
+            <ul style="list-style:none; padding:0; font-size:15px;">
+                <li><a href="blog.html" style="color:#ffffff; text-decoration:none;">Blog</a></li>
+                <li><a href="about.html" style="color:#ffffff; text-decoration:none;">About</a></li>
+                <li><a href="contact.html" style="color:#ffffff; text-decoration:none;">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+            <h3 style="margin-bottom:15px; color:#ffffff;">Contact</h3>
+            <p style="font-size:15px; color:#ffffff;">📍 Pakistan</p>
+            <p style="font-size:15px; color:#ffffff;">📧 info@edusmart.pk</p>
+        </div>
+
+    </div>
+
+    <!-- Bottom Bar -->
+    <div style="text-align:center; margin-top:35px; border-top:1px solid #ffffff; padding-top:15px; font-size:14px; color:#ffffff;">
+        <p>&copy; 2026 EduSmart Pakistan | All Rights Reserved <br> Build with 💙 for Students & Professionals.</p>
+    </div>
+
+</footer>
+
+</body>
+</html>
